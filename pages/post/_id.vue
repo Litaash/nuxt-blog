@@ -30,9 +30,12 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci dolor velit placeat aperiam, totam provident laborum rerum modi, quo, ipsam maxime! Nostrum et asperiores maiores itaque rem ducimus dolorum?</p>
     </main>
     <footer>
-      <app-comment-form />
+      <app-comment-form
+        v-if="canAddComment"
+        @created="createCommentHandler"
+      />
 
-      <div class="comments" v-if="false">
+      <div class="comments" v-if="true">
         <app-comment
           v-for="comment in 4"
           :key="comment"
@@ -55,6 +58,16 @@ export default {
   components: {
     AppComment,
     AppCommentForm
+  },
+  data() {
+    return {
+      canAddComment: true
+    }
+  },
+  methods: {
+    createCommentHandler() {
+      this.canAddComment = false
+    }
   }
 }
 </script>
