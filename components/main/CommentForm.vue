@@ -60,11 +60,8 @@ export default {
           }
 
           try {
-            setTimeout(() => {
-              this.$message.success('Комментарий добавлен')
-              this.$emit('created')
-            }, 2000)
-
+            this.$message.success('Комментарий добавлен')
+            this.$emit('created')
           } catch (e) {
             this.loading = false
           }
