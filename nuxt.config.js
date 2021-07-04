@@ -14,6 +14,8 @@ export default {
     ]
   },
 
+  mode: 'universal',
+
   css: [
     'element-ui/lib/theme-chalk/index.css',
     '@/theme/index.scss'
