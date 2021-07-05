@@ -12,7 +12,7 @@
     </el-table-column>
     <el-table-column prop="views" label="Просмотры">
       <template slot-scope="{row: {views}}">
-        <i class="el-icon-view"></i>
+        <i class="el-icon-view" />
         <span style="margin-left: 10px">{{ views }}</span>
       </template>
     </el-table-column>
